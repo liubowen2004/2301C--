@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./ys.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        nav {
+            width: 100vw;
+            background-color: #333333;
+            height: 40px;
+            color: #a0a0a0;
+            display: flex;
+            align-items: center;
+            padding: 0 120px;
+            justify-content: space-between;
+        }
+
+        nav ul {
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+
+        nav>.right {
+            width: 15%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            color: #a0a0a0;
+        }
+
+        nav>.right>button {
+            height: 40px;
+            background-color: #424242;
+            color: #a0a0a0;
+            width: 100px;
+        }
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 120px;
+            align-items: center;
+            height: 100px;
+        }
+
+        .top>img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .top>li {
+            display: flex;
+            justify-content: space-between;
+            width: 50%;
+        }
+
+        .top>.npm {
+            display: flex;
+            align-items: center;
+        }
+
+        .top>.npm>input {
+            height: 40px;
+            border: 1px solid #e6e6e6;
+            width: 200px;
+        }
+
+        .top>.npm>div {
+            width: 40px;
+            height: 40px;
+            background-image: url('./img/search.PNG');
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            background-size: 40%;
+            border: 1px solid #e6e6e6;
+        }
+
+        .right-nav {
+            width: 80px;
+            text-align: center;
+            position: fixed;
+            right: 5px;
+            bottom: 200px;
+        }
+
+        .right-nav>li {
+            border: 1px solid #e6e6e6;
+            height: 80px;
+            padding-top: 20px;
+        }
+
+        .braedcrumb {
+            width: 100%;
+            padding: 0 120px;
+            background-color: #f5f5f5;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            height: 40px;
+        }
+
+        section {
+            width: 100%;
+            padding: 0 120px;
+        }
+
+        section>ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        section>ul>li {
+            border: 1px solid #e1e1e1;
+            width: 300px;
+            height: 170px;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        footer {
+            width: 100%;
+            padding: 0 120px;
+            /* height: 120px; */
+            /* border-bottom: 1px solid #efefef; */
+            border-bottom: 1px solid #e1e1e1;
+        }
+
+        footer>ol>li {
+            height: 150px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer-section{
+            padding-left: 200px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer-section h4{
+            margin-bottom: 30px;
+        }
+        .footer-section p{
+            margin: 10px 0;
+        }
+        /* .footer-section-button  */
+        .footer-section-button h4{
+            font-size: 30px;
+            margin-bottom: -10px;
+            color: #ff7a55;
+        }
+        .footer-section-button .btn{
+            width: 200px;
+            height: 40px;
+            border: 1px solid #ff7a55;
+            color: #ff7a55;
+            background-color: #fff;
+        }
+        footer>h5{
+            text-align: center;
+            margin: 30px 0;
+            color: #dcdcdc;
+        }
+        .footer-txt img{
+            margin-left: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>小米官网</li>
+            <li>小米商城</li>
+            <li>MIUI</li>
+            <li>loT</li>
+            <li>云服务</li>
+            <li>天星数科</li>
+            <li>有品</li>
+            <li>小爱开放平台</li>
+            <li>资质证照</li>
+            <li>协议规则</li>
+            <li>下载app</li>
+            <li>SelectLocation</li>
+        </ul>
+        <div class="right">
+            <p>登录</p>
+            <p>注册</p>
+            <p>消息通知</p>
+            <button>购物车(0)</button>
+        </div>
+    </nav>
+    <div class="top">
+        <img src="./img/logo.PNG" alt="">
+        <li>
+            <p>全部商品分类</p>
+            <p>Xiaomi手机</p>
+            <p>Redmi手机</p>
+            <p>电视</p>
+            <p>笔记本</p>
+            <p>平板</p>
+            <p>家电</p>
+            <p>路由器</p>
+            <p>服务社区</p>
+            <p>社区</p>
+        </li>
+        <div class="npm">
+            <input type="text">
+            <div></div>
+        </div>
+    </div>
+
+    <div class="right-nav">
+        <li>
+            <img src="./img/手机.PNG" alt="">
+            <p>手机APP</p>
+        </li>
+        <li>
+            <img src="./img/my.PNG" alt="">
+            <p>个人中心</p>
+        </li>
+        <li>
+            <img src="./img/售后.PNG" alt="">
+            <p>售后服务</p>
+        </li>
+        <li>
+            <img src="./img/人工服务.PNG" alt="">
+            <p>人工客服</p>
+        </li>
+        <li>
+            <img src="./img/shopcar.PNG" alt="">
+            <p>购物车</p>
+        </li>
+    </div>
+    <div class="braedcrumb">
+        <p>首页&emsp;/&emsp;全部商品分类</p>
+    </div>
+    <section>
+        <p style="color: #ff6701; margin: 20px;">手机</p>
+        <ul>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5c57d3a5e8a2fde79bcffce9d5344c80.png" alt="">
+                <p>Xiaomi MIX系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/168b20a5ea19280f9ddb3cc423f1db4e.png" alt="">
+                <p>Xiaomi MIX系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/4ed8c4ca59357db902916b5b9dfb8016.png" alt="">
+                <p>Xiaomi MIX系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/42436481ce985c1f69be688a15d7531e.png" alt="">
+                <p>Xiaomi MIX系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/2a6dfdc51ff25583042e86d9ae2697b3.png" alt="">
+                <p>Xiaomi MIX系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c15a3d1b4e8bf2af17e6b5ad5559cfcb.png" alt="">
+                <p>Xiaomi MIX系列</p>
+            </li>
+        </ul>
+        <p style="color: #ff6701; margin: 20px;">电视</p>
+        <ul>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5c57d3a5e8a2fde79bcffce9d5344c80.png" alt="">
+                <p>小米电视 S Pro Mini LED</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/168b20a5ea19280f9ddb3cc423f1db4e.png" alt="">
+                <p>小米电视 大师系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/4ed8c4ca59357db902916b5b9dfb8016.png" alt="">
+                <p>小米电视 S系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/42436481ce985c1f69be688a15d7531e.png" alt="">
+                <p>小米电视 EA系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/2a6dfdc51ff25583042e86d9ae2697b3.png" alt="">
+                <p>Redmi电视 MAX系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c15a3d1b4e8bf2af17e6b5ad5559cfcb.png" alt="">
+                <p>Redmi电视 A系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c15a3d1b4e8bf2af17e6b5ad5559cfcb.png" alt="">
+                <p>小米电视A竞技系列</p>
+            </li>
+        </ul>
+
+        <p style="color: #ff6701; margin: 20px;">家电</p>
+        <ul>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5c57d3a5e8a2fde79bcffce9d5344c80.png" alt="">
+                <p>小米电视 S Pro Mini LED</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/168b20a5ea19280f9ddb3cc423f1db4e.png" alt="">
+                <p>小米电视 大师系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/4ed8c4ca59357db902916b5b9dfb8016.png" alt="">
+                <p>小米电视 S系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/42436481ce985c1f69be688a15d7531e.png" alt="">
+                <p>小米电视 EA系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/2a6dfdc51ff25583042e86d9ae2697b3.png" alt="">
+                <p>Redmi电视 MAX系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c15a3d1b4e8bf2af17e6b5ad5559cfcb.png" alt="">
+                <p>Redmi电视 A系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c15a3d1b4e8bf2af17e6b5ad5559cfcb.png" alt="">
+                <p>小米电视A竞技系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5c57d3a5e8a2fde79bcffce9d5344c80.png" alt="">
+                <p>小米电视 S Pro Mini LED</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/168b20a5ea19280f9ddb3cc423f1db4e.png" alt="">
+                <p>小米电视 大师系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/4ed8c4ca59357db902916b5b9dfb8016.png" alt="">
+                <p>小米电视 S系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/42436481ce985c1f69be688a15d7531e.png" alt="">
+                <p>小米电视 EA系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/2a6dfdc51ff25583042e86d9ae2697b3.png" alt="">
+                <p>Redmi电视 MAX系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c15a3d1b4e8bf2af17e6b5ad5559cfcb.png" alt="">
+                <p>Redmi电视 A系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c15a3d1b4e8bf2af17e6b5ad5559cfcb.png" alt="">
+                <p>小米电视A竞技系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c15a3d1b4e8bf2af17e6b5ad5559cfcb.png" alt="">
+                <p>小米电视A竞技系列</p>
+            </li>
+        </ul>
+    </section>
+    <footer>
+        <ol>
+            <li>
+                <p>预约维修服务</p>
+                <p>七天无理由退货</p>
+                <p>15天免费换货</p>
+                <p>满69</p>
+                <p>预约维修服务</p>
+                <p>1100余家售后网点</p>
+            </li>
+        </ol>
+        <div class="footer-section">
+            <li>
+                <h4>选购指南</h4>
+                <p>手机</p>
+                <p>电视</p>
+                <p>笔记本</p>
+                <p>平板</p>
+                <p>穿戴</p>
+                <p>耳机</p>
+                <p>家电</p>
+                <p>路由器</p>
+                <p>音响</p>
+                <p>配件</p>
+            </li>
+            <li>
+                <h4>服务中心</h4>
+                <p>申请售后</p>
+                <p>售后政策</p>
+                <p>维修服务价格</p>
+                <p>订单查询</p>
+                <p>以旧唤醒</p>
+                <p>保障服务</p>
+                <p>防伪查询</p>
+                <p>F码通道</p>
+            </li>
+            <li>
+                <h4>线下门店</h4>
+                <p>小米之家</p>
+                <p>服务网点</p>
+                <p>授权体验店/专区</p>
+            </li>
+            <li>
+                <h4>关于小米</h4>
+                <p>了解小米</p>
+                <p>加入小米</p>
+                <p>投资者关系</p>
+                <p>可持续发展</p>
+                <p>廉洁举报</p>
+            </li>
+            <li>
+                <h4>关注我们</h4>
+                <p>新浪微博</p>
+                <p>官方微信</p>
+                <p>联系我们</p>
+                <p>公益基金会</p>
+            </li>
+            <li class="footer-section-button">
+                <h4>400-100-5678</h4>
+                <p>8:00-18:00(仅收市话费)</p>
+                <button type="button" class="btn btn-default">人工客服</button>
+            </li>
+        </div>
+        <div class="footer-txt">
+            <img src="./img/footer-txt.PNG" alt="">
+        </div>
+        <h5>
+            让全球每个人都能享受科技带来的美好生活
+        </h5>
+    </footer>
+    <script>
+
+    </script>
+</body>
+
+</html>

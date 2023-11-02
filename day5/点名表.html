@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .dmb {
+            text-align: center;
+            margin: 20px 0;
+            font-weight: 700;
+        }
+
+        ul {
+            width: 600px;
+            margin: 100px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        section>ul>p {
+            margin: 20px;
+            background: linear-gradient(to right, red, blue);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 100px;
+        }
+
+        .btm {
+            margin-top: 500px;
+        }
+
+        .btm>button {
+            background-color: #7ebe54;
+            color: #fff;
+            width: 100px;
+            height: 40px;
+            border-radius: 50px;
+            border: 0;
+            outline: 0;
+        }
+
+        .time {
+            float: right;
+            margin-right: 100px;
+        }
+
+        .right {
+            text-align: center;
+        }
+        .tx{
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="dmb">H2301C点名表</h1>
+    <p class="time">时间2023-10-26</p>
+    <section>
+        <ul>
+
+        </ul>
+
+        <div class="right">
+            <p class="tx">天选之人
+            <h1 id="name"></h1>
+            </p>
+            <div class="btm">
+                <button onclick="Single()">单人点名</button>
+                <button onclick="towClick()">双人点名</button>
+                <button>男生点名</button>
+                <button>女生点名</button>
+            </div>
+        </div>
+    </section>
+    <script>
+        let arr = ['杨浩淇', '刘博文', '余道林',
+            '展立业', '赵中阳', '周天龙',
+            '李媛媛', '张秋景', '曹博文',
+            '孙健', '杨晓宇', '陈亚东',
+            '曹昊然', '王婷婷', '杨子乐',
+            '冯士靖', '李炎沛', '斐丽珂',
+            '付少聪', '李超凡', '王凯',
+            '丁卓肖', '余道林', '王志阳',]
+        var randomeName = document.querySelector('ul')
+        let index
+        function render() {
+            var str = ''
+            for (let i = 0; i < arr.length; i++) {
+                str += `<p>${arr[i]}</p>`
+            }
+            randomeName.innerHTML = str
+        }
+        render()
+        var timer = null
+        var name = ''
+        function Single() {
+            if (timer == null) {
+                name=''
+                timer = setInterval(() => {
+                    let index = Math.floor(Math.random() * arr.length)
+                    name = arr[index]
+                    document.querySelector('#name').innerHTML = name
+                }, 200)
+            } else {
+                clearInterval(timer)
+                timer = null
+            }
+        }
+
+        function towClick(){
+            if (timer == null) {
+                name=''
+                timer = setInterval(() => {
+                    let index = Math.floor(Math.random() * arr.length)
+                    let indexs = Math.floor(Math.random() * arr.length)
+                    name = arr[index]+','+arr[indexs]
+                    document.querySelector('#name').innerHTML = name
+                }, 200)
+            } else {
+                clearInterval(timer)
+                timer = null
+            }
+        }
+    </script>
+</body>
+
+</html>
