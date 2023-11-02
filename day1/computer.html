@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        li{
+            list-style: none;
+        }
+        .computer{
+            width: 400px;
+            margin: 100px auto;
+            border: 1px solid #000;
+            padding: 5px;
+        }
+        textarea{
+            width: 100%;
+            resize: none;
+            height: 100px;
+            padding-top: 30px;
+            font-size: 30px;
+            text-align: right;
+            font-weight: 800;
+            padding-right: 5px;
+            outline: 0;
+            border: 1px solid #ccc;
+        }
+        table{
+            width: 100%;
+        }
+        td{
+            width: 70px;
+            height: 70px;
+            border: 2px solid #dddddd;
+            background-color: #efefef;
+            text-align: center;
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+    <div class="computer">
+        <textarea class="sum"></textarea>
+        <table class="table table-hover" value="">
+            <tbody>
+                <tr>
+                    <td onclick="num('1')">1</td>
+                    <td onclick="num('2')">2</td>
+                    <td onclick="num('3')">3</td>
+                    <td onclick="sum1()">=</td>
+                    <td onclick="num('+')">+</td>
+                </tr>
+                <tr>
+                    <td onclick="num('4')">4</td>
+                    <td onclick="num('5')">5</td>
+                    <td onclick="num('6')">6</td>
+                    <td onclick="back()">Back</td>
+                    <td onclick="num('-')">-</td>
+                </tr>
+                <tr>
+                    <td onclick="num('7')">7</td>
+                    <td onclick="num('8')">8</td>
+                    <td onclick="num('9')">9</td>
+                    <td onclick="outter()">C</td>
+                    <td onclick="num('*')">*</td>
+                </tr>
+                <tr>
+                    <td onclick="num('0')">0</td>
+                    <td onclick="num('0')">0</td>
+                    <td onclick="num('.')">.</td>
+                    <td onclick="num('/')">/</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        var sum=document.querySelector('.sum')
+        function num(e){
+            this.sum.value+=e
+        }
+        function sum1(){
+            this.sum.value=eval(this.sum.value)
+        }
+        function outter(){
+            document.querySelector('.sum').value=''
+        }
+    </script>
+</body>
+</html>
